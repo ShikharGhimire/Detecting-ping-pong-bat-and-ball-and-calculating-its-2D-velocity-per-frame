@@ -54,6 +54,7 @@ end
 realPics = regionprops(remainingImages,'Centroid');
 currentCentroidBat = realPics(1).Centroid; %Current centroid for the bati
 currentCentroidBall = realPics(2).Centroid; %Current centroud for the ball
+%Calculating the velocity of the bat and the ball using centroid
 if (pictures>=1)
 vel_bat = sqrt(sum((currentCentroidBat - oldCentroidBat).^2))/2;
 vel_ball = sqrt(sum((currentCentroidBall - oldCentroidBall).^2))/2;
